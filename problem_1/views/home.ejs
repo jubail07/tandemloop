@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background: #f4f7fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            background: #fff;
+            padding: 20px 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            min-width: 320px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 22px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            background: #4f8cff;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2563eb;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            text-align: center;
+            color: #2563eb;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <form action="/" method="post">
+            <input type="number" step="any" name="a" placeholder="Enter first number" required>
+            <input type="number" step="any" name="b" placeholder="Enter second number" required>
+
+            <select name="operation">
+                <option value="add">Addition</option>
+                <option value="sub">Subtraction</option>
+                <option value="mul">Multiplication</option>
+                <option value="div">Division</option>
+            </select>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <h3>Result: <%= result %>
+        </h3>
+    </div>
+</body>
+
+</html>
